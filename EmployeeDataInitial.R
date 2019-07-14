@@ -15,6 +15,8 @@ library(data.table)
 library(xgboost)
 library(Matrix)
 library(lightgbm)
+library(TeachingDemos)
+
 
 ##Notations off and clear all objects
 options(scipen = 999)
@@ -22,6 +24,8 @@ rm(list = ls())
 gc()
 
 startime=Sys.time()
+
+txtStart("consoleoutput.txt")
 
 emptrain_orig=fread("E:\\AbhinavB\\Kaggle\\Amazon Employee Access\\amazon-employee-access-challenge\\train.csv",
               data.table = FALSE,
@@ -99,12 +103,12 @@ summary(fitlgbcv)
 fitlgbcv
 
 
-
+txtStop()
            
            
            
            
-           )
+           
 
 
 
